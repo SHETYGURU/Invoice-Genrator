@@ -5,12 +5,14 @@ This project is an invoice generator web application designed to help users crea
 ## Table of Contents
 
 - [Features](#features)
+-  [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Form Fields](#form-fields)
 - [Validation](#validation)
 - [Contributing](#contributing)
 - [License](#license)
+
 
 ## Features
 
@@ -21,6 +23,10 @@ This project is an invoice generator web application designed to help users crea
 - Real-time validation for pincode, PAN, and GST fields
 - Preview and clear invoice functionalities
 - Responsive design for better user experience on various devices
+
+## Demo
+
+Check out the live demo [here](https://aurikatech.netlify.app/).
 
 ## Installation
 
@@ -35,6 +41,7 @@ This project is an invoice generator web application designed to help users crea
     ```sh
     cd invoice-generator
     ```
+
 ## Usage
 
 1. Open the `index.html` file in a web browser.
@@ -118,3 +125,5 @@ Contributions are welcome! Please follow these steps to contribute:
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+
