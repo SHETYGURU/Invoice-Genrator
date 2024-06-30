@@ -1,0 +1,142 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.invoice {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.img{
+    width: 20%;
+}
+.invoice-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none; /* Remove underline */
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.left {
+    margin-right: 20px; /* Ensure space between left and right sections */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.right {
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.details p {
+    margin-bottom: 5px;
+}
+
+#item-details-display {
+    margin-top: 20px;
+}
+
+#item-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#item-table th, #item-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#amount-in-words {
+    margin-top: 20px;
+}
+
+#signature-section {
+    text-align: right;
+    margin-top: 20px;
+}
+#download-pdf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px; /* Increased width to accommodate the icon */
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #506272;
+    color: white;
+    border: 2px solid #fafdff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#download-pdf:hover {
+    background-color: #43525f;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation keyframes for a pulsating effect */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Apply the pulsating effect on hover */
+#download-pdf:hover {
+    animation: pulsate 1s infinite;
+}
+
+#download-pdf i {
+    margin-right: 8px; /* Space between the icon and text */
+}
+

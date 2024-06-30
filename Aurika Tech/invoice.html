@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="invoice.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="invoice" id="invoice">
+        <div class="invoice-header">
+            <img src="preview.jpg" alt="Company Logo" style="width: 30%;">
+            <h1 style="align-content: center;">Invoice</h1>
+        </div>
+        <div id="seller-details" class="section">
+            <h2>Seller Details</h2>
+            <div class="details">
+                <div class="left">
+                    <p id="seller-name"></p>
+                    <p id="seller-address"></p>
+                    <p id="seller-city"></p>
+                    <p id="seller-state"></p>
+                    <p id="seller-pincode"></p>
+                </div>
+                <div class="right">
+                    <p id="seller-pan"></p>
+                    <p id="seller-gst"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="details">
+                <div class="left">
+                    <div id="billing-details">
+                        <h2>Billing Details</h2>
+                        <p id="billing-name"></p>
+                        <p id="billing-address"></p>
+                        <p id="billing-city"></p>
+                        <p id="billing-state"></p>
+                        <p id="billing-pincode"></p>
+                        <p id="billing-state-code"></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div id="shipping-details">
+                        <h2>Shipping Details</h2>
+                        <p id="shipping-name"></p>
+                        <p id="shipping-address"></p>
+                        <p id="shipping-city"></p>
+                        <p id="shipping-state"></p>
+                        <p id="shipping-pincode"></p>
+                        <p id="shipping-state-code"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="place-of-delivery" class="section">
+            <h2>Place of Delivery</h2>
+            <p id="place-of-delivery-text"></p>
+        </div>
+        
+        <div class="section">
+            <div class="details">
+                <div class="left">
+                    <div id="order-details">
+                        <h2>Order Details</h2>
+                        <p id="order-no"></p>
+                        <p id="order-date"></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div id="invoice-details">
+                        <h2>Invoice Details</h2>
+                        <p id="invoice-no"></p>
+                        <p id="invoice-date"></p>
+                        <p id="reverse-charge"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="place-of-supply" class="section">
+            <h2>Place of Supply</h2>
+            <p id="place-of-supply-text"></p>
+        </div>
+        
+        <div id="item-details-display" class="section">
+            <h2>Item Details</h2>
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Discount</th>
+                        <th>Net Amount</th>
+                        <th>Tax Type</th>
+                        <th>Tax Rate</th>
+                        <th>Tax Amount</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <div class="details">
+                <div class="left">
+                    <div id="amount-in-words">
+                        <h2>Amount in Words</h2>
+                        <p id="amount-words"></p>
+                    </div>
+                </div> 
+                <div class="right">
+                    <div id="signature-section">
+                        <h2>Signature</h2>
+                        <img id="signature" src="" alt="Signature" style="width: 30%;">
+                        <p>Authorised Signatory</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button id="download-pdf"><i class="fas fa-download"></i> Download Invoice</button>
+
+    </div>
+    
+    
+    <script src="invoice.js"></script>
+</body>
+</html>

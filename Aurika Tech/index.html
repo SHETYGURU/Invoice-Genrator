@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="preview.jpg" alt="Logo" class="logo" style="padding-left: 10px;">
+        <h1> Invoice Generator</h1>
+    </div>
+    <form id="invoice-form">
+        <fieldset>
+            <legend>Seller Details</legend>
+            <div class="form-row">
+                <label>Name: <input type="text" id="seller-name" required></label>
+                <label>Address: <input type="text" id="seller-address" required></label>
+                <label>City: <input type="text" id="seller-city" required></label>
+            </div>
+            <div class="form-row">
+                <label>State: 
+                    <select id="seller-state" required></select>
+                </label>
+                <label>Pincode: <input type="text" id="seller-pincode" required></label>
+                <label>PAN No.: <input type="text" id="seller-pan" required></label>
+                <label>GST Registration No: <input type="text" id="seller-gst" required></label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Billing Details</legend>
+            <div class="form-row">
+                <label>Name: <input type="text" id="billing-name" required></label>
+                <label>Address: <input type="text" id="billing-address" required></label>
+                <label>City: <input type="text" id="billing-city" required></label>
+            </div>
+            <div class="form-row">
+                <label>State: 
+                    <select id="billing-state" required></select>
+                </label>
+                <label>Pincode: <input type="text" id="billing-pincode" required></label>
+                <label>State/UT Code: <input type="text" id="billing-state-code" required></label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Shipping Details</legend>
+            <div class="form-row">
+                <label>Name: <input type="text" id="shipping-name" required></label>
+                <label>Address: <input type="text" id="shipping-address" required></label>
+                <label>City: <input type="text" id="shipping-city" required></label>
+            </div>
+            <div class="form-row">
+                <label>State: 
+                    <select id="shipping-state" required></select>
+                </label>
+                <label>Pincode: <input type="text" id="shipping-pincode" required></label>
+                <label>State/UT Code: <input type="text" id="shipping-state-code" required></label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Order Details</legend>
+            <div class="form-row">
+                <label>Order No.: <input type="text" id="order-no" required></label>
+                <label>Order Date: <input type="date" id="order-date" required></label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Invoice Details</legend>
+            <div class="form-row">
+                <label>Invoice No.: <input type="text" id="invoice-no" required></label>
+                <label>Invoice Date: <input type="date" id="invoice-date" required></label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Place of Supply and Delivery</legend>
+            <div class="form-row">
+                <label>Place of Supply: <input type="text" id="place-of-supply" required></label>
+                <label>Place of Delivery: <input type="text" id="place-of-delivery" required></label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Reverse Charge</legend>
+            <div>
+                <input type="radio" id="reverse-charge-yes" name="reverse-charge" value="Yes">
+                <label for="reverse-charge-yes">Yes</label>
+            </div>
+            <div>
+                <input type="radio" id="reverse-charge-no" name="reverse-charge" value="No">
+                <label for="reverse-charge-no">No</label>
+            </div>
+        </fieldset>
+        <fieldset id="item-details">
+            <legend>Item Details</legend>
+            <div class="form-row">
+                <button type="button" id="add-item">Add Item</button>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Signature</legend>
+            <label>Signature: <input type="file" id="signature" accept=".jpg, .jpeg, .png" required></label>
+        </fieldset>
+        <div class="button-container">
+            <button type="submit" id="generate-invoice">
+                <i class="fas fa-eye"></i> Preview
+            </button>
+            <button type="button" id="download-invoice">
+                <i class="fas fa-trash-alt"></i> Clear Invoice
+            </button>
+        </div>
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>

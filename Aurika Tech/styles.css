@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.header {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .logo {
+    width: 200px;
+    animation: slideIn 1s ease-in-out;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 1.0); /* Adding a white background with opacity to make the form readable */
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 1.0); /* Adding a white background with opacity to make the fieldsets readable */
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-row label {
+    flex: 1 1 calc(33% - 20px); /* Adjust this to display 2-3 fields per row */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Base button styles */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px; /* Adjust width to fit icon and text */
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #506272;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+button i {
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+/* Hover effect with background color change, white border, and border radius */
+button:hover {
+    background-color: #42515e;
+    border-color: white; /* White border on hover */
+    border-radius: 10px; /* Increased border radius on hover */
+    transform: scale(1.05); /* Scale effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation keyframes for a pulsating effect */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Apply the pulsating effect on hover */
+button:hover {
+    animation: pulsate 1s infinite;
+}
+
+
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-400%); }
+    to { transform: translateX(-300%); }
+}
+#add-item {
+    display: block;
+    width: auto;
+    padding: 5px 10px;
+    background-color: #506272;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#add-item:hover {
+    background-color: #465664;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#download-invoice .download-symbol {
+    margin-right: 5px;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row label {
+        flex: 1 1 100%;
+    }
+
+    button {
+        margin-left: 0;
+    }
+    .logo{
+        margin-bottom: 10px;
+    }
+}
+/* Align radio buttons horizontally */
+fieldset {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+fieldset div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Optional: Style for labels */
+fieldset div label {
+    margin-right: 5px;
+}
